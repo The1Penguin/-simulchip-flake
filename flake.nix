@@ -22,7 +22,7 @@
         packages.default = self'.packages.simulchip;
         packages.simulchip = pkgs.python3.pkgs.buildPythonApplication {
           name = "simulchip";
-          version = "1.0.0";
+          version = "1.0.7";
 
           src = simulchip;
           build-system = [
