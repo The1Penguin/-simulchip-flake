@@ -20,9 +20,9 @@
 
       perSystem = {self', pkgs, system, ...}: {
         packages.default = self'.packages.simulchip;
-        packages.simulchip = pkgs.python3.pkgs.buildPythonPackage {
+        packages.simulchip = pkgs.python3.pkgs.buildPythonApplication {
           name = "simulchip";
-          version = "1";
+          version = "1.0.0";
 
           src = simulchip;
           build-system = [
@@ -37,7 +37,8 @@
             rich
             rich-pixels
           ];
-          pyproject = true;
+          
+          format = "pyproject";
 
         };
       };
